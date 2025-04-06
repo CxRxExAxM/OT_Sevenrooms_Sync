@@ -66,6 +66,7 @@ async def sync_data(df: pd.DataFrame):
             if row["source"] != "opentable":
                 await client.post(ot_url, json=payload, headers={"Authorization": f"Bearer {OPENTABLE_API_KEY}"})
 
+
 @app.get("/sync")
 async def sync_reservations():
     sr_data, ot_data = await get_raw_data()
@@ -81,6 +82,7 @@ def get_reservations():
     df = pd.read_sql_query("SELECT * FROM reservations", conn)
     conn.close()
     return df.to_dict(orient="records")
+
 
 if __name__ == "__main__":
     import uvicorn
