@@ -12,9 +12,9 @@ Python, FastAPI, SQLite3
   - Opentable
   - Sevenrooms
 - Test API PULL
-  -What is format/columns
-    -do they need to transform
-  -Pull and insert into DBs
+  - What is format/columns
+    - do they need to transform
+  - Pull and insert into DBs
     - Maybe comnbine before with pandas
         - Good to keep combine and apend DB to keep historics later
 - Test Updated PUSH
